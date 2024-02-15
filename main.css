@@ -99,6 +99,7 @@ form .button-area{
 .button-area span{
     color: #0D6EFD;
     margin-left: 30px;
+    display: none;
 }
 
 @media (max-width:600px) {
