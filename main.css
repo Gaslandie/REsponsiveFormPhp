@@ -10,16 +10,121 @@ body{
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: aqua;
+    background-color:#0D6EFD;
 }
 
 .container{
     width: 720px;
     background-color: aliceblue;
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 5px;
 }
 .container header{
-    font-size: 2rem;
-    font-weight: ;
+    font-size: 1.8rem;
+    font-weight:600;
+    padding: 20px;
+    border-bottom: 1px solid #bfbfbf;
+}
+.container form{
+    margin: 35px 30px;
+}
+form .dbl-field{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.dbl-field .field{
+    position: relative;
+    height: 50px;
+    width: calc(100%/2 - 13px);
+}
+form .field input,
+form .message textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 15px 0 50px;
+    border: 1px solid #bfbfbf;
+}
+form .field input:focus,
+form .message textarea:focus{
+    border: 2px solid #0D6EFD;
+}
+form .field input::placeholder,
+form .message textarea::placeholder{
+    color: #bbb5b5;
+}
+form .field input:focus ~ i,
+form .message textarea:focus ~ i{
+    color: #0D6EFD;
+}
+.container form i{
+    position:absolute;
+    left: 18px;
+    top: 50%;
+    color: #bbb5b5;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+form .message{
+    position: relative;
+}
+
+form .message i{
+    top:25px;
+    font-size: 20px;
+}
+form .message textarea{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 120px;
+    max-height: 300px;
+    padding: 15px 20px 0px 48px;
+}
+form .button-area{
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+}
+.button-area button{
+    font-size: 15px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #0D6EFD;
+    border-radius: 5px;
+    padding: 13px 25px;
+}
+.button-area span{
+    color: #0D6EFD;
+    margin-left: 30px;
+}
+
+@media (max-width:600px) {
+    .container header{
+        text-align: center;
+    }
+    form .dbl-field{
+        flex-direction: column;
+        margin-bottom: 0;
+        
+    }
+    form .message textarea{
+        resize: none;
+    }
+    .dbl-field .field{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    form .button-area{
+        flex-direction: column;
+    }
+    .button-area button{
+        width: 100%;
+    }
+    .button-area span {
+        margin: 20px 0;
+        text-align: center;
+    };
 }
